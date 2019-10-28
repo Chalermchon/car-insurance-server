@@ -1,0 +1,25 @@
+@layout('layouts.master')
+
+@section('title')
+    Car Series: {{ brand }}
+@endsection
+
+@section('content')
+    <h1 class="mb-4 text-center">{{ brand }}</h1>
+
+    <div class="container">
+    <div class="row d-flex justify-content-center">
+    @each(model in models)
+        <div class="card mb-2 mr-2 border-secondary shadow-sm col-lg-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ model.name }}</h5>
+                <p class="card-subtitle mb-2 text-muted">{{ model.since }} - {{ model.to }}</p>
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-sm btn-outline-secondary" href="{{ route('CarSeryController.show', {brand: brand, model: model.name}) }}" >See more</a>
+                </div>
+            </div>
+        </div>
+    @endeach
+    </div>
+    </div>
+@endsection

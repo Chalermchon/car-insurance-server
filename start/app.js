@@ -21,6 +21,8 @@ const providers = [
   '@adonisjs/auth/providers/AuthProvider',
   '@radmen/adonis-lucid-soft-deletes/providers/SoftDeletesProvider',
   'adonis-jsonable/providers/JsonableProvider',
+  '@adonisjs/validator/providers/ValidatorProvider',
+  '@conceptho/adonis-validators',
 ]
 
 /*

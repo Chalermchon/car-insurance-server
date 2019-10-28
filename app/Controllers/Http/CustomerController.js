@@ -19,31 +19,25 @@ class CustomerController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index({ request, response, view }) {
+  async index ({ request, response, view }) {
 
-    const customersRes = []
-    const customers = await Customer.all()
-
-    customers.rows.forEach(customer => {
-
-      let customerTmp = {
-        name_prefix: customer.name_prefix,
-        first_name: customer.first_name,
-        last_name: customer.last_name,
-        ident_number: customer.ident_number,
-        ident_img: customer.ident_img,
-        birth_date: customer.birth_date,
-        address: JSON.parse(customer.address),
-        phone: customer.phone,
-        email: customer.email,
-        career: customer.career
-      }
-
-      customersRes.push(customerTmp)
+    const customers = (await Customer.all()).rows
+  
+    return view.render('customers.index',  {
+      customers: customers
     })
+  }
 
-    response.json(customersRes)
-    console.log('GET Customers')
+  /**
+   * Render a form to be used for creating a new customer.
+   * GET customers/create
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   * @param {View} ctx.view
+   */
+  async create ({ request, response, view }) {
   }
 
   /**
@@ -54,28 +48,7 @@ class CustomerController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store({ request, response }) {
-    const customer_req = request.post()
-
-    const customer = new Customer()
-
-    customer.name_prefix = customer_req.name_prefix
-    customer.first_name = customer_req.first_name
-    customer.last_name = customer_req.last_name
-    customer.ident_number = customer_req.ident_number
-    customer.ident_img = customer_req.ident_img
-    customer.birth_date = new Date(customer_req.birth_date)
-    customer.address = JSON.stringify(customer_req.address)
-    customer.phone = customer_req.phone
-    customer.email = customer_req.email
-    customer.career = customer_req.career
-
-    if (await customer.save()) {
-      console.log('POST: CustomerID ' + customer.id)
-      response.send(true)
-    } else {
-      response.send(false)
-    }
+  async store ({ request, response }) {
   }
 
   /**
@@ -87,24 +60,19 @@ class CustomerController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show({ params, request, response, view }) {
-    const customer = await Customer.find(params.id)
+  async show ({ params, request, response, view }) {
+  }
 
-      let customerRes = {
-        name_prefix: customer.name_prefix,
-        first_name: customer.first_name,
-        last_name: customer.last_name,
-        ident_number: customer.ident_number,
-        ident_img: customer.ident_img,
-        birth_date: customer.birth_date,
-        address: JSON.parse(customer.address),
-        phone: customer.phone,
-        email: customer.email,
-        career: customer.career
-      }
-
-      response.json(customerRes);
-
+  /**
+   * Render a form to update an existing customer.
+   * GET customers/:id/edit
+   *
+   * @param {object} ctx
+   * @param {Request} ctx.request
+   * @param {Response} ctx.response
+   * @param {View} ctx.view
+   */
+  async edit ({ params, request, response, view }) {
   }
 
   /**
@@ -115,7 +83,7 @@ class CustomerController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update({ params, request, response }) {
+  async update ({ params, request, response }) {
   }
 
   /**
@@ -126,7 +94,7 @@ class CustomerController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy({ params, request, response }) {
+  async destroy ({ params, request, response }) {
   }
 }
 

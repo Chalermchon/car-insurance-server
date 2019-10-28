@@ -15,13 +15,21 @@ const CarType = use('App/Models/CarType')
 
 class CarTypeSeeder {
   async run () {
-    const carType = new CarType()
+    var carType
     // carType.type_name = "..."
-    // carType.save()
+    // await carType.save()
 
+    carType = new CarType()
     carType.type_name = "รถเก๋ง"
-    carType.save()
+    await carType.save()
     
+    carType = new CarType()
+    carType.type_name = "รถปิคอัพ"
+    await carType.save()
+
+    carType = new CarType()
+    carType.type_name = "รถตู้"
+    await carType.save()
   }
 }
 

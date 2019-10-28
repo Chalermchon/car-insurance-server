@@ -1,0 +1,19 @@
+@layout('layouts.master')
+
+@section('content')
+    <h1 class="mb-3">Customers</h1>
+
+    @each(customer in customers)
+        <div class="card mb-2 shadow-sm">
+            <div class="card-body container-fluid d-flex justify-content-between">
+                <div>
+                    {{customer.name_prefix}} {{customer.first_name}} {{customer.last_name}}
+                </div>
+                <div>
+                    <a class="btn btn-sm btn-outline-secondary" href="#" >See more</a>
+                </div>
+            </div>
+        </div>
+        
+    @endeach
+@endsection

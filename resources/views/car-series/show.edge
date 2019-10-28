@@ -1,0 +1,36 @@
+@layout('layouts.master')
+
+@section('title')
+Car Series: {{ brand }}-{{ model }}
+@endsection
+
+@section('content')
+<h1 class="mb-4 text-center">{{ brand }}</h1>
+
+<div class="card mb-2 border-secondary shadow-sm">
+    <div class="card-body container-fluid">
+        <h2 class="card-title mb-4">{{ model }}</h2>
+        <div class="mb-4">
+
+            <label>ปีที่ผลิต: </label>
+            <select class="custom-select" onchange="handleChance()" id="yearSelector" style="width: 120px;">
+                @each(detailsOfYear in detailsOfYears)
+                    <option value="{{ detailsOfYear.year }}">{{ detailsOfYear.year }}</option>
+                @endeach
+            </select>
+
+        </div>
+        <div id="details">
+        </div>
+    </div>
+</div>
+{{ 
+script('
+    function handleChange() {
+        var year = document.getElementById("yearSelector").value
+        @set("year", year)
+        console.log(year);
+    }
+')
+}}
+@endsection
