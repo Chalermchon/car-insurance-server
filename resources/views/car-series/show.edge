@@ -7,30 +7,53 @@ Car Series: {{ brand }}-{{ model }}
 @section('content')
 <h1 class="mb-4 text-center">{{ brand }}</h1>
 
-<div class="card mb-2 border-secondary shadow-sm">
+<div class="card mb-2 border-secondary shadow col-md-8 col-lg-6 ml-auto mr-auto">
     <div class="card-body container-fluid">
-        <h2 class="card-title mb-4">{{ model }}</h2>
-        <div class="mb-4">
-
-            <label>ปีที่ผลิต: </label>
-            <select class="custom-select" onchange="handleChance()" id="yearSelector" style="width: 120px;">
-                @each(detailsOfYear in detailsOfYears)
-                    <option value="{{ detailsOfYear.year }}">{{ detailsOfYear.year }}</option>
-                @endeach
-            </select>
-
-        </div>
-        <div id="details">
-        </div>
+                <h2 class="card-title mb-4 d-flex justify-content-between">
+                    {{ model }}
+                    <div class="d-flex flex-row">
+                        <a role="button" href="#" class="btn btn-warning mr-2 rounded-circle"><i class="far fa-edit" style="color: white"></i></a>
+                        <a role="button" href="#" class="btn btn-danger rounded-circle"><i class="far fa-trash-alt" style="color: white"></i></a>
+                    </div>
+                </h2>
+                <div class="pl-5">
+                    <div class="mb-4">
+                        <label><h5>ปีที่ผลิต: </h5></label>
+                        <select class="custom-select" onchange="onChange()" id="yearSelector" style="width: 120px;">
+                            @each(detailsOfYear in detailsOfYears)
+                                <option value="{{ detailsOfYear.year }}">{{ detailsOfYear.year }}</option>
+                            @endeach
+                        </select>
+                        
+                    </div>
+                    <h5>รายละเอียดรุ่น</h5>
+                    <div id="details">
+                        @each(detailsOfYear in detailsOfYears)
+                            <div id="{{detailsOfYear.year}}" hidden>
+                                <ul>
+                                    @each(detail in detailsOfYear.details)
+                                        <li>{{detail}}</li>
+                                    @endeach
+                                </ul>
+                            </div>
+                        @endeach
+                    </div>
+                </div>
     </div>
 </div>
-{{ 
-script('
-    function handleChange() {
-        var year = document.getElementById("yearSelector").value
-        @set("year", year)
-        console.log(year);
+<script>
+    var value = document.getElementById('yearSelector').value
+    const details = [...document.getElementById('details').children]
+    document.getElementById(value).hidden = false
+    
+    function onChange() {
+        value = document.getElementById('yearSelector').value
+
+        details.forEach(detail => {
+            document.getElementById(detail.id).hidden = true
+        })
+
+        document.getElementById(value).hidden = false
     }
-')
-}}
+</script>
 @endsection

@@ -1,31 +1,46 @@
-# Adonis fullstack application
+# Car Insurance Server 
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+เป็น Sever และ เว็บ Admin ของเว็บซื้อประกันจากประกันของบริษัทเอเชียประกันภัย
+<br/>
+ซึ่งจัดทำขึ้นเพิ่อเป็นงานโปรเจ็คของวิชา SA และ Web-Tech
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+## วิธีการ Setup
+* ติดตั้ง adonis ด้วยคำสั่ง
+    ``` bash
+    npm i -g @adonis/cli
+    ```
+* และทำการ install package ต่างๆด้วยคำสั่ง
+    ``` bash
+     adonis install หรือ npm install
+    ```
 
-## Setup
+* ทำการคัดลอกไฟล์ .env.example ไปสร้างไฟล์ใหม่
+<br/>
+โดยใช้ชื่อว่า .env
 
-Use the adonis command to install the blueprint
+* จากนั้นทำการ generate secret key ด้วยคำสั่ง
+    ```bash
+     adonis key:generate
+    ```
 
-```bash
-adonis new yardstick
-```
+* เข้าไปแก้ไขข้อมูล Database ในไฟล์ .env 
+    > DB_CONNECTION=mysql<br/>
+    > DB_HOST=localhost<br/>
+    > DB_PORT=<< Port of your Database >><br/>
+    > DB_USER=<< Username for access your Database >><br/>
+    > DB_PASSWORD=<< Password of Username >><br/>
+    > DB_DATABASE=<< your Database Name >><br/>
 
-or manually clone the repo and then run `npm install`.
+* ทำการสร้าง Table ของ Database พร้อมสร้างข้อมูลเริ่มต้น ด้วยคำสั่ง
+    ```bash
+     adonis migration:run --seed
+    ```
+    และในครั้งต่อๆไปให้ใช้คำสั่งนี้
+    ```bash
+     adonis migration:refresh --seed
+    ```
 
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+* และสุดท้ายรันเว็บด้วยคำสั่ง
+    ```bash
+     adonis serve --dev
+    ```

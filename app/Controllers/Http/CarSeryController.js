@@ -21,6 +21,7 @@ class CarSeryController {
    */
   async index ({ params, request, response, view }) {
     const carSery = await CarSery.query().where('brand', params.brand).fetch()
+      console.log(carSery);
     const brand = params.brand
     const models = []
     carSery.rows.forEach(element => {
@@ -40,12 +41,13 @@ class CarSeryController {
       if (notFound) {
         models.push({
           name: element.model,
+          group: element.carGroup.groupName,
+          type: element.carType.typeName,
           since: element.year,
           to: element.year
         })
       }
     });
-
     return view.render('car-series.index', { brand: brand, models: models })
   }
 
@@ -102,10 +104,8 @@ class CarSeryController {
           details: [element.detail]
         })
       }
-
     })
     
-
     return view.render('car-series.show', { brand: brand, model: model, detailsOfYears: detailsOfYears })
   }
 
@@ -119,6 +119,9 @@ class CarSeryController {
    * @param {View} ctx.view
    */
   async edit ({ params, request, response, view }) {
+    const brand = params.brand
+    const model = params.model
+    return view.render('car-series.edit', {brand: brand, model: model})
   }
 
   /**
