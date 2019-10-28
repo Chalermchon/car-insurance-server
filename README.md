@@ -41,7 +41,10 @@
     ```
 
 ## วิธีการ Run
-
 ```bash
  adonis serve --dev
 ```
+
+## ข้อมูลที่ใช้ทดสอบ
+> Email: admin@email.com
+> Password: admin

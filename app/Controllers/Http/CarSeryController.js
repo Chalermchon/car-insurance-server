@@ -21,7 +21,6 @@ class CarSeryController {
    */
   async index ({ params, request, response, view }) {
     const carSery = await CarSery.query().where('brand', params.brand).fetch()
-      console.log(carSery);
     const brand = params.brand
     const models = []
     carSery.rows.forEach(element => {
