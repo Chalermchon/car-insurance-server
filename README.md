@@ -40,7 +40,8 @@
      adonis migration:refresh --seed
     ```
 
-* และสุดท้ายรันเว็บด้วยคำสั่ง
-    ```bash
-     adonis serve --dev
-    ```
+## วิธีการ Run
+
+```bash
+ adonis serve --dev
+```
