@@ -26,7 +26,7 @@
 * เข้าไปแก้ไขข้อมูล Database ในไฟล์ .env 
     > DB_CONNECTION=mysql<br/>
     > DB_HOST=localhost<br/>
-    > DB_PORT=<< Port of your Database >><br/>
+    > DB_PORT=<< Port of your Database Server >><br/>
     > DB_USER=<< Username for access your Database >><br/>
     > DB_PASSWORD=<< Password of Username >><br/>
     > DB_DATABASE=<< your Database Name >><br/>
