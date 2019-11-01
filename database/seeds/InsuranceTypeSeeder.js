@@ -20,7 +20,8 @@ class InsuranceTypeSeeder {
     // insuranceType.option = "..." /ถ้าไม่มี ใส่ null
     // insuranceType.protection_detail_id = 0
     // insuranceType.save()
-    
+
+    //ยังไม่ต้องทำ
   }
 }
 

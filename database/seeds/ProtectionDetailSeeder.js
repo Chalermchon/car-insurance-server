@@ -16,10 +16,12 @@ const ProtectionDetail = use('App/Models/ProtectionDetail')
 class ProtectionDetailSeeder {
   async run () {
     const protectionDetail = new ProtectionDetail()
-    protectionDetail.detail = JSON.stringify({
-      "...": "...",
-      "...": "...",
-    })
+    // protectionDetail.detail = JSON.stringify({
+    //   "...": "...",
+    //   "...": "...",
+    // })
+
+    //ยังไม่ต้องทำ
   }
 }
 

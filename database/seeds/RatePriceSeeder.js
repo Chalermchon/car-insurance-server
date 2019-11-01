@@ -20,6 +20,8 @@ class RatePriceSeeder {
     // ratePrice.car_group_id = 0
     // ratePrice.car_type_id = 0
     // ratePrice.price = 0.0
+
+    //ยังไม่ต้องทำ
       
   }
 }
