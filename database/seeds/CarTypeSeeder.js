@@ -21,6 +21,22 @@ class CarTypeSeeder {
 
     carType.type_name = "รถเก๋ง"
     carType.save()
+
+    carType.type_name = "รถปิคอัพ"
+    carType.save()
+
+    carType.type_name = "รถตู้"
+    carType.save()
+
+    carType.type_name = "รถตู้ส่วนบุคคล"
+    carType.save()
+
+    carType.type_name = "SUV"
+    carType.save()
+
+    carType.type_name = "MPV"
+    carType.save()
+    
     
   }
 }
