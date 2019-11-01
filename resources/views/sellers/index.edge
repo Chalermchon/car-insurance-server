@@ -1,0 +1,30 @@
+@layout('layouts.master')
+
+@section('title')
+    Sellers
+@endsection
+
+@section('content')
+
+    <h5 class="text-center">Here you go.</h5>
+    <h1 class="text-center mb-4">List of Sellers.</h1>
+
+    @each(seller in sellers)
+        <div class="card mb-2 shadow-sm col-md-6 ml-auto mr-auto border-secondary ">
+            <div class="card-body container-fluid d-flex justify-content-between">
+                <div>
+                    <h5 class="card-title">
+                        {{seller.name_prefix}} {{seller.first_name}} {{seller.last_name}}
+                    </h5>
+                    <h6 class="card-subtitle text-muted">
+                        <span>@</span>{{seller.username}}
+                    </h6>
+                </div>
+                <a class="btn btn-sm btn-outline-secondary align-self-stretch d-flex align-items-center" 
+                href="{{ route('SellerController.show', {'id': seller.username}) }}" >
+                    See more
+                </a>
+            </div>
+        </div>
+    @endeach
+@endsection

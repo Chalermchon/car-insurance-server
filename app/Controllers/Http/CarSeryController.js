@@ -19,34 +19,31 @@ class CarSeryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ params, request, response, view }) {
+  async index({ params, request, response, view }) {
     const carSery = await CarSery.query().where('brand', params.brand).fetch()
+    
     const brand = params.brand
     const models = []
-    carSery.rows.forEach(element => {
-      
-      let notFound = true
-      models.forEach(model => {
+    await carSery.rows.map( async (element) => {
+      notFound = true
+      models.map( (model) => {
         if (model.name === element.model) {
           notFound = false
-          if (Number(model.since) > Number(element.year)) {
-            model.since = element.year
-          }
-          else if (Number(model.to) < Number(element.year) ) {
-            model.to = element.year
-          }
         }
       })
       if (notFound) {
-        models.push({
-          name: element.model,
-          group: element.carGroup.groupName,
-          type: element.carType.typeName,
-          since: element.year,
-          to: element.year
-        })
+        var carGroup = await element.carGroup().fetch()
+        var carType = await element.carType().fetch()
+          models.push({
+            name: element.model,
+            groupName: carGroup.group_name,
+            typeName: carType.type_name,
+          })
+          console.log(models);
       }
     });
+    console.log(models);
+    
     return view.render('car-series.index', { brand: brand, models: models })
   }
 
@@ -59,7 +56,7 @@ class CarSeryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create ({ request, response, view }) {
+  async create({ request, response, view }) {
   }
 
   /**
@@ -70,7 +67,7 @@ class CarSeryController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store ({ request, response }) {
+  async store({ request, response }) {
   }
 
   /**
@@ -82,19 +79,20 @@ class CarSeryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
+  async show({ params, request, response, view }) {
     const brand = params.brand
     const model = params.model
     const detailsOfYears = []
 
-    const carSery = await CarSery.query().where({'brand': brand, 'model': model}).fetch()
-    carSery.rows.forEach(element => {
+    const carSery = await CarSery.query().where({ 'brand': brand, 'model': model.name }).fetch()
+    
+    carSery.rows.map( (element) => {
 
       let notFound = true
       detailsOfYears.forEach(detailsOfYear => {
         if (detailsOfYear.year === element.year) {
           notFound = false
-          detailsOfYear.details.push(element.detail)
+          return detailsOfYear.details.push(element.detail)
         }
       })
       if (notFound) {
@@ -104,7 +102,7 @@ class CarSeryController {
         })
       }
     })
-    
+
     return view.render('car-series.show', { brand: brand, model: model, detailsOfYears: detailsOfYears })
   }
 
@@ -117,10 +115,10 @@ class CarSeryController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async edit ({ params, request, response, view }) {
+  async edit({ params, request, response, view }) {
     const brand = params.brand
     const model = params.model
-    return view.render('car-series.edit', {brand: brand, model: model})
+    return view.render('car-series.edit', { brand: brand, model: model })
   }
 
   /**
@@ -131,7 +129,7 @@ class CarSeryController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {
+  async update({ params, request, response }) {
   }
 
   /**
@@ -142,7 +140,7 @@ class CarSeryController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, request, response }) {
+  async destroy({ params, request, response }) {
   }
 }
 

@@ -21,10 +21,13 @@ Route.post('/login', 'UserController.login').validator('Login').middleware('gues
 Route.post('/logout', 'UserController.logout').middleware('auth').as('/user.logout')
 
 Route.get('/welcome', 'HomeController.index').middleware('auth')
-Route.resource('/customers', 'CustomerController').middleware('auth')
-Route.group(() => {
-    Route.get('/:brand', 'CarSeryController.index').as('/car-series.index')
-    Route.get('/:brand/:model', 'CarSeryController.show').as('/car-series.show')
-}).prefix('/car-series').middleware('auth')
+Route.resource('/sellers', 'SellerController').middleware('auth').validator(new Map([
+    ['/sellers.store', 'StoreSeller'],
+]))
+// Route.resource('/customers', 'CustomerController').middleware('auth')
+// Route.group(() => {
+//     Route.get('/:brand', 'CarSeryController.index').as('/car-series.index')
+//     Route.get('/:brand/:model', 'CarSeryController.show').as('/car-series.show')
+// }).prefix('/car-series').middleware('auth')
 
 Route.resource('/api/customers', 'Api/CustomerController').apiOnly()

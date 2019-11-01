@@ -13,10 +13,11 @@ class UserController {
            await auth.attempt(email, password)
            return response.redirect('/welcome')
         } catch (error) {
+            
             if (error.name === 'PasswordMisMatchException') {
                 session.flash({'error': 'Your password is incorrect.'})
+                return response.redirect('back')
             }
-            return response.redirect('back')
         }
     }
     
