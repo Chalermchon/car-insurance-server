@@ -467,7 +467,6 @@ class CarSerySeeder {
     carSery.car_group_id = 3
     carSery.car_type_id = 1
     carSery.save()
-<<<<<<< HEAD
 
     carSery.year = "1995"
     carSery.save()
@@ -18634,8 +18633,6 @@ class CarSerySeeder {
 
 
 
-=======
->>>>>>> 95bad38804b53c268064f17f45a1fd68c10d25fe
   }
 }
 
