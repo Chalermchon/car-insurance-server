@@ -16,5 +16,15 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
-Route.resource('/api/customers', 'CustomerController').apiOnly()
+Route.get('/', 'UserController.index').middleware('guest').as('/index')
+Route.post('/login', 'UserController.login').validator('Login').middleware('guest').as('/user.login')
+Route.post('/logout', 'UserController.logout').middleware('auth').as('/user.logout')
+
+Route.get('/welcome', 'HomeController.index').middleware('auth')
+Route.resource('/customers', 'CustomerController').middleware('auth')
+Route.group(() => {
+    Route.get('/:brand', 'CarSeryController.index').as('/car-series.index')
+    Route.get('/:brand/:model', 'CarSeryController.show').as('/car-series.show')
+}).prefix('/car-series').middleware('auth')
+
+Route.resource('/api/customers', 'Api/CustomerController').apiOnly()

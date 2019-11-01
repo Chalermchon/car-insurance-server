@@ -7,7 +7,7 @@ class ProtectionDetailsSchema extends Schema {
   up () {
     this.create('protection_details', (table) => {
       table.bigIncrements('id')
-      table.json('detail').notNullable()
+      table.json('details').notNullable()
       table.timestamps()
       table.timestamp('deleted_at').nullable()
     })

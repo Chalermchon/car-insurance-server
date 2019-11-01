@@ -9,6 +9,8 @@ const Model = use('Model')
 class User extends Model {
   static boot () {
     super.boot()
+    
+    this.addTrait('@provider:Lucid/SoftDeletes')
 
     /**
      * A hook to hash the user password before saving

@@ -8,7 +8,7 @@ class InsuranceTypesSchema extends Schema {
     this.create('insurance_types', (table) => {
       table.bigIncrements('id')
       table.string('insurance_name', 100).notNullable()
-      table.text('option').nullable().defaultTo(null)
+      table.json('option').nullable().defaultTo(null)
       table.bigInteger('protection_detail_id').unsigned().references('id').inTable('protection_details')
       table.timestamps()
       table.timestamp('deleted_at').nullable()

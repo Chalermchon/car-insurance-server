@@ -15,7 +15,7 @@ const CarSery = use('App/Models/CarSery')
 
 class CarSerySeeder {
   async run () {
-    var carSery 
+    var carSery
     // carSery.brand = "..."
     // carSery.model = "..."
     // carSery.year = "..."
@@ -450,11 +450,24 @@ class CarSerySeeder {
     carSery.car_type_id = 1
     carSery.save()
 
+    carSery = new CarSery()
+    carSery.brand = "Toyota"
+    carSery.model = "Camry"
     carSery.year = "1994"
+    carSery.detail = "2.2 GXi 4Doors"
+    carSery.car_group_id = 3
+    carSery.car_type_id = 1
     carSery.save()
 
+    carSery = new CarSery()
+    carSery.brand = "Toyota"
+    carSery.model = "Camry"
+    carSery.year = "1994"
     carSery.detail = "3.0 GLX V6 4Doors"
+    carSery.car_group_id = 3
+    carSery.car_type_id = 1
     carSery.save()
+<<<<<<< HEAD
 
     carSery.year = "1995"
     carSery.save()
@@ -18621,6 +18634,8 @@ class CarSerySeeder {
 
 
 
+=======
+>>>>>>> 95bad38804b53c268064f17f45a1fd68c10d25fe
   }
 }
 

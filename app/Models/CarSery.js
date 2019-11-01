@@ -10,7 +10,7 @@ class CarSery extends Model {
 
         this.addTrait('@provider:Lucid/SoftDeletes')
     }
- 
+
     carInformations() {
         return this.hasMany('App/Models/CarInformation')
     }

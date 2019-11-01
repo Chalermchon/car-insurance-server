@@ -15,20 +15,25 @@ const CarGroup = use('App/Models/CarGroup')
 
 class CarGroupSeeder {
   async run () {
-    const carGroup = new CarGroup()
+    var carGroup
 
+    carGroup = new CarGroup()
     carGroup.group_name = 'กลุ่มที่ 1'
     await carGroup.save()
 
+    carGroup = new CarGroup()
     carGroup.group_name = 'กลุ่มที่ 2'
     await carGroup.save()
 
+    carGroup = new CarGroup()
     carGroup.group_name = 'กลุ่มที่ 3'
     await carGroup.save()
 
+    carGroup = new CarGroup()
     carGroup.group_name = 'กลุ่มที่ 4'
     await carGroup.save()
 
+    carGroup = new CarGroup()
     carGroup.group_name = 'กลุ่มที่ 5'
     await carGroup.save()
     
