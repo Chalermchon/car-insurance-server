@@ -34,14 +34,6 @@ class CarTypeSeeder {
     carType = new CarType()
     carType.type_name = "รถตู้ส่วนบุคคล"
     await carType.save()
-
-    carType = new CarType()
-    carType.type_name = "SUV"
-    await carType.save()
-
-    carType = new CarType()
-    carType.type_name = "MPV"
-    await carType.save()
     
   }
 }
