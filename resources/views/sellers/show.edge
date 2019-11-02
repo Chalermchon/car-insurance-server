@@ -1,0 +1,28 @@
+@layout('layouts.master')
+
+@section('title')
+    Seller: {{seller.username}}
+@endsection
+
+@section('content')
+    <div class="mb-5 mt-5">
+        <h1 class="text-center">{{ seller.name_prefix }} {{ seller.first_name }} {{ seller.last_name }}</h1>    
+        <h5 class="text-center text-muted">( <span>@</span>{{ seller.username }} )</h5>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <p class="col text-right">วัน/เดือน/ปี เกิด</p>
+            <p class="col"> {{ formatDate(seller.birth_date) }} </p>
+        </div>
+        <div class="row">
+            <p class="col text-right">อีเมล</p>
+            <p class="col"> {{ seller.email }} </p>
+        </div>
+        <div class="row">
+            <p class="col text-right">เบอร์โทรศัพท์</p>
+            <p class="col"> {{ seller.phone }} </p>
+        </div>
+    </div>
+
+@endsection

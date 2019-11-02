@@ -12,6 +12,7 @@ class InsuranceRequestsSchema extends Schema {
       table.bigInteger('customer_id').unsigned().references('id').inTable('customers')
       table.bigInteger('seller_id').unsigned().references('id').inTable('sellers')
       table.bigInteger('insurance_type_id').unsigned().references('id').inTable('insurance_types')
+      table.date('start_protection_at').notNullable()
       table.timestamps()
       table.timestamp('deleted_at').nullable()
     })

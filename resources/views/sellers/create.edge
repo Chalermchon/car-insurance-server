@@ -1,0 +1,151 @@
+@layout('layouts.master')
+
+@section('title')
+    Create: Seller
+@endsection
+
+@section('content')
+    <div class="mb-5 mt-5">
+        <h5 class="text-center text-muted">Please tell me his / her Information for</h5>
+        <h1 class="text-center">Create a New Seller.</h1>
+    </div>
+
+    <form class="container mb-5" method="POST" action="{{ route('SellerController.store') }}">
+        {{ csrfField() }}
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">คำนำหน้า</label>
+                <div class="col-md-4 col-8">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="name_prefix" value="นาย"
+                            @if(old('name_prefix') === 'นาย')
+                                checked
+                            @endif    
+                        >
+                        <label class="form-check-label">นาย</label>
+                        
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="name_prefix" value="นาง"
+                            @if(old('name_prefix') === 'นาง')
+                                checked
+                            @endif
+                        >
+                        <label class="form-check-label">นาง</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="name_prefix" value="นางสาว"
+                            @if(old('name_prefix') === 'นางสาว')
+                                checked
+                            @endif
+                        >
+                        <label class="form-check-label">นางสาว</label>
+                    </div>
+                </div>
+            </div>
+            @if(hasErrorFor('name_prefix'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('name_prefix') }}
+                </span>
+            @endif
+        </div>
+        
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">ชื่อจริง</label>
+                <input type="text" class="form-control col-lg-3 col-md-4 col-6" name="first_name" value="{{ old('first_name', '') }}">
+            </div>
+            @if(hasErrorFor('first_name'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('first_name') }}
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">นามสกุล</label>
+                <input type="text" class="form-control col-lg-3 col-md-4 col-6" name="last_name" value="{{ old('last_name', '') }}">
+            </div>
+            @if(hasErrorFor('last_name'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('last_name') }}
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">วัน/เดือน/ปี เกิด</label>
+                <div  class="col-lg-3 col-md-4 col-6">
+                    <input class="form-control" id="datepicker" name="birth_date" placeholder="ตย. 31-01-1994" value="{{ old('birth_date', '') }}">
+                </div>
+            </div>
+            @if(hasErrorFor('birth_date'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('birth_date') }}
+                </span>
+            @endif
+        </div>
+        
+        
+        <hr class="col-8"/>
+        
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">เบอร์โทรศัพท์</label>
+                <input type="text" class="form-control col-lg-3 col-md-4 col-6" name="phone" value="{{ old('phone', '') }}">
+            </div>
+            @if(hasErrorFor('phone'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('phone') }}
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">อีเมล</label>
+                <input type="email" class="form-control col-lg-3 col-md-4 col-6" name="email" value="{{ old('email', '') }}">
+            </div>
+            @if(hasErrorFor('email'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('email') }}
+                </span>
+            @endif
+        </div>
+        
+        <hr class="col-8"/>
+        
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">Username</label>
+                <input type="text" class="form-control col-lg-3 col-md-4 col-6" name="username" value="{{ old('username', '') }}">
+            </div>
+            @if(hasErrorFor('username'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('username') }}
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">Password</label>
+                <input type="password" class="form-control col-lg-3 col-md-4 col-6" name="password" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-5 col-4 text-right">Confirm Password</label>
+                <input type="password" class="form-control col-lg-3 col-md-4 col-6" name="password_confirmation" placeholder="">
+            </div>
+            @if(hasErrorFor('password'))
+                <span class="text-danger row d-flex justify-content-center">
+                    {{ getErrorFor('password') }}
+                </span>
+            @endif
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <button class="btn btn-secondary col-lg-6 col-md-8 col-10" type="submit">Create</button>
+        </div>
+
+    </form>
+
+@endsection

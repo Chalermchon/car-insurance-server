@@ -12,7 +12,7 @@ class CustomersSchema extends Schema {
       table.string('last_name', 50) .notNullable()
       table.string('ident_number', 20).notNullable()
       table.string('ident_img', 200).notNullable()
-      table.date('birth_date').notNullable()
+      table.datetime('birth_date').notNullable()
       table.json('address').notNullable()
       table.string('phone', 10).notNullable()
       table.string('email', 50).notNullable()

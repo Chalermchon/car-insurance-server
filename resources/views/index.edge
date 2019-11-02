@@ -7,8 +7,55 @@
 @section('content')
 
     <div class="container-fluid"> 
-        <div class="row mb-3 justify-content-md-center">
-            <h1 class="col-md-8 text-center">Welcome Sir</h1>
+        <div class="row mb-5 justify-content-md-center">
+            <i class="col-md-8 text-center fas fa-robot mb-2" style="font-size: 84px; color: #666666"></i>
+            <h1 class="col-md-8 text-center mb-2">Welcome Sir.</h1>
+            <h5 class="col-md-8 text-center">Please command me.</h5>
+        </div>
+        <div>
+            <a class="btn btn-outline-secondary btn-lg btn-block mb-3" role="button"
+            href="{{ route('SellerController.index') }}" >
+                Give me the <span style="font-weight: 600">List of Sellers</span>.
+            </a>
+
+            <a class="btn btn-outline-secondary btn-lg btn-block mb-3" role="button"
+            href="{{ route('SellerController.create') }}" >
+                <span style="font-weight:600">Create</span> a new <span style="font-weight: 600">Seller</span> for me.
+            </a>
+
+            <button class="btn btn-outline-secondary btn-lg btn-block mb-3" type="button" data-toggle="modal"
+            data-target="#fillUsernameOfSeller" >
+                <span style="font-weight:600">Find</span> a <span style="font-weight: 600">Seller</span> for me.
+            </button>
+            <div class="modal fade" id="fillUsernameOfSeller" tabindex="-1" role="dialog" aria-labelledby="fillUsernameOfSeller" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">
+                                Tell me his / her <span style="font-weight: 600">Username</span>.
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group border border-dark mb-2 mt-2" style="border-radius: 18px" >
+                                <i class="fas fa-search mt-auto mb-auto ml-3 mr-3" style="font-size: 20px; color: #888888"></i>
+                                <input type="text" class="form-control" style="border-color:transparent; border-radius: 0 18px 18px 0" 
+                                       id="username" placeholder="Enter Username here." onkeydown='searchKeyPress(event)'>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary btn-lg btn-block rounded-pill ml-5 mr-5"
+                                    onclick="onClickFind()">
+                                Find
+                            </button>
+                        </div>
+                        <script>
+                        </script>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>  
     
