@@ -23,6 +23,7 @@ class InsuranceTypeSeeder {
    
     //-----2+ max ซ่อมห้าง-------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Max (ซ่อมห้าง)"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "150,000",
@@ -32,6 +33,7 @@ class InsuranceTypeSeeder {
     await insuranceType.save()
 
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Max (ซ่อมห้าง)"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "200,000",
@@ -41,6 +43,7 @@ class InsuranceTypeSeeder {
     await insuranceType.save()
 
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Max (ซ่อมห้าง)"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "300,000",
@@ -51,6 +54,7 @@ class InsuranceTypeSeeder {
 
     //--------2+ max ซ่อมอู่--------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Max (ซ่อมอู่)"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "150,000",
@@ -60,6 +64,7 @@ class InsuranceTypeSeeder {
     await insuranceType.save()
 
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Max (ซ่อมอู่)"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "200,000",
@@ -69,6 +74,7 @@ class InsuranceTypeSeeder {
     await insuranceType.save()
 
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Max (ซ่อมอู่)"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "300,000",
@@ -79,6 +85,7 @@ class InsuranceTypeSeeder {
 
     //--------2+ 35 up--------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ 35 up"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "100,000",
@@ -88,6 +95,7 @@ class InsuranceTypeSeeder {
     await insuranceType.save()
 
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ 35 up"
     insuranceType.option = JSON.stringify({
       "ทุนประกัน" : "200,000",
@@ -99,6 +107,7 @@ class InsuranceTypeSeeder {
 
     //-----2+ Minimal ซ่อมอู่-------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2+"
     insuranceType.insurance_name = "2+ Minimal (ซ่อมอู่)"
     insuranceType.option = null
     insuranceType.protection_detail_id = 4
@@ -106,6 +115,7 @@ class InsuranceTypeSeeder {
 
     //-------------- 3+ --------------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "3+"
     insuranceType.insurance_name = "3+"
     insuranceType.option = JSON.stringify({
       // "ทุนประกัน" : "150,000",
@@ -116,6 +126,7 @@ class InsuranceTypeSeeder {
     await insuranceType.save()
 
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "3+"
     insuranceType.insurance_name = "3+"
     insuranceType.option = JSON.stringify({
       // "ทุนประกัน" : "150,000",
@@ -127,6 +138,7 @@ class InsuranceTypeSeeder {
 
     //-------------- 2 เซฟ Special --------------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2"
     insuranceType.insurance_name = "2 เซฟ Special"
     insuranceType.option = null
     insuranceType.protection_detail_id = 6
@@ -134,6 +146,7 @@ class InsuranceTypeSeeder {
 
     //-------------- 2 กันชน --------------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "2"
     insuranceType.insurance_name = "2 กันชน"
     insuranceType.option = null
     insuranceType.protection_detail_id = 6
@@ -141,6 +154,7 @@ class InsuranceTypeSeeder {
 
     //-------------- 3 Best --------------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "3"
     insuranceType.insurance_name = "3 Best"
     insuranceType.option = null
     insuranceType.protection_detail_id = 7
@@ -148,6 +162,7 @@ class InsuranceTypeSeeder {
 
     //-------------- 3 กันชน --------------
     insuranceType  = new InsuranceType()
+    insuranceType.insurance_group = "3"
     insuranceType.insurance_name = "3 กันชน"
     insuranceType.option = null
     insuranceType.protection_detail_id = 8
