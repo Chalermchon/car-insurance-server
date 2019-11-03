@@ -38,6 +38,8 @@ Route.resource('/api/customers', 'Api/CustomerController').apiOnly().middleware(
 Route.get('/api/car-series', 'Api/CarseryController.index').as('/api/car-series.index')
 Route.get('/api/insurance-types', 'Api/InsuranceTypeController.index').as('/api/insurance-types.index')
 Route.get('/api/rate-prices/:car_group_id/:car_type_id', 'Api/RatePriceController.index').as('/api/rate-prices.index')
+Route.post('/api/car-informations', 'Api/CarInformationController.store').as('/api/car-informations.store')
+Route.post('/api/insurance-requests', 'Api/InsuranceRequestController.store').as('/api/insurance-requests.store')
 
 Route.get('/identImges/:imgName', async ({ response, params: {imgName} }) => {
     response.download(Helpers.tmpPath('identImges/'+imgName))

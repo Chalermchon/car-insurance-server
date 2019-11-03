@@ -4,8 +4,8 @@ const RatePrice = use('App/Models/RatePrice')
 
 class RatePriceController {
 
-  
-  async index ({ params: {car_group_id, car_type_id} , response }) {
+
+  async index({ params: { car_group_id, car_type_id }, response }) {
     const ratePrices = await RatePrice.query()
       .where('car_group_id', car_group_id).where('car_type_id', car_type_id)
       .with('insuranceType', insuranceTypeQuery => {

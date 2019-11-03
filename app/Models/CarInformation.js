@@ -10,6 +10,9 @@ class CarInformation extends Model {
         
         this.addTrait('@provider:Lucid/SoftDeletes')
     }
+    getLicensePlate(licensePlate) {
+        return JSON.parse(licensePlate);
+    }
 
     insuranceRequests() {
         return this.hasMany('App/Models/InsuranceRequest')

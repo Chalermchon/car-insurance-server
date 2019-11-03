@@ -4,7 +4,7 @@ const Customer = use('App/Models/Customer')
 
 class CustomerController {
 
-  
+
   async index({ request, response }) {
     const customers = await Customer.all()
 
@@ -17,9 +17,11 @@ class CustomerController {
 
   async store({ request, response }) {
     const {
-      name_prefix, first_name, last_name, ident_number, ident_img,
-      birth_date, address, phone, email, career
+      name_prefix, first_name, last_name, ident_number, ident_img, birth_date,
+      houseNumber, changwat, amphoe, tambon, postalCode, phone, email, career
     } = request.post()
+
+    const address = JSON.stringify({houseNumber, changwat, amphoe, tambon, postalCode})
 
     const customer = await Customer.create({
       name_prefix, first_name, last_name, ident_number, ident_img,
@@ -58,7 +60,7 @@ class CustomerController {
     customer.career = request.post().career
 
     await customer.save()
-    
+
     response.status(200).json({
       message: 'Successfully updated this customer.',
       data: customer
@@ -70,7 +72,7 @@ class CustomerController {
     const customer = request.post().customer
 
     await customer.delete()
-    
+
     response.status(200).json({
       message: 'Successfully deleted this customer.',
       data: customer
