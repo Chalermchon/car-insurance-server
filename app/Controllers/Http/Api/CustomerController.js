@@ -1,131 +1,85 @@
 'use strict'
 
-/** @typedef {import('@adonisjs/framework/src/Request')} Request */
-/** @typedef {import('@adonisjs/framework/src/Response')} Response */
-/** @typedef {import('@adonisjs/framework/src/View')} View */
-
 const Customer = use('App/Models/Customer')
 
-/**
- * Resourceful controller for interacting with customers
- */
 class CustomerController {
-  /**
-   * Show a list of all customers.
-   * GET customers
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async index({ request, response, view }) {
 
-    const customers = (await Customer.all()).rows
+  
+  async index({ request, response }) {
+    const customers = await Customer.all()
 
-    const customersRes = []
+    console.log(request.ip() +' => '+'GET: Customers;');
+    response.status(200).json({
+      message: 'Here are your customers.',
+      data: customers
+    })
+  }
 
-    customers.forEach(customer => {
-      let customerTmp = {
-        name_prefix: customer.name_prefix,
-        first_name: customer.first_name,
-        last_name: customer.last_name,
-        ident_number: customer.ident_number,
-        ident_img: customer.ident_img,
-        birth_date: customer.birth_date,
-        address: JSON.parse(customer.address),
-        phone: customer.phone,
-        email: customer.email,
-        career: customer.career
-      }
 
-      customersRes.push(customerTmp)
+  async store({ request, response }) {
+    const {
+      name_prefix, first_name, last_name, ident_number, ident_img,
+      birth_date, address, phone, email, career
+    } = request.post()
+
+    const customer = await Customer.create({
+      name_prefix, first_name, last_name, ident_number, ident_img,
+      birth_date, address, phone, email, career
     })
 
-    console.log('GET Customers')
-    return response.json(customersRes)
+    console.log(request.ip() +' => '+'POST: Customer(' + customer.id +');')
+    response.status(201).json({
+      message: 'Successfully created a new customer.',
+      data: customer
+    })
   }
 
-  /**
-   * Create/save a new customer.
-   * POST customers
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async store({ request, response }) {
-    const customer_req = request.post()
 
-    const customer = new Customer()
+  async show({ request, response }) {
+    const customer = request.post().customer
 
-    customer.name_prefix = customer_req.name_prefix
-    customer.first_name = customer_req.first_name
-    customer.last_name = customer_req.last_name
-    customer.ident_number = customer_req.ident_number
-    customer.ident_img = customer_req.ident_img
-    customer.birth_date = new Date(customer_req.birth_date)
-    customer.address = JSON.stringify(customer_req.address)
-    customer.phone = customer_req.phone
-    customer.email = customer_req.email
-    customer.career = customer_req.career
-
-    if (await customer.save()) {
-      console.log('POST: CustomerID ' + customer.id)
-      response.send(true)
-    } else {
-      response.send(false)
-    }
+    console.log(request.ip() +' => '+'GET: Customer(' + customer.id +');')
+    response.status(200).json({
+      message: 'Here is your customer.',
+      data: customer
+    })
   }
 
-  /**
-   * Display a single customer.
-   * GET customers/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async show({ params, request, response, view }) {
-    const customer = await Customer.find(params.id)
 
-      let customerRes = {
-        name_prefix: customer.name_prefix,
-        first_name: customer.first_name,
-        last_name: customer.last_name,
-        ident_number: customer.ident_number,
-        ident_img: customer.ident_img,
-        birth_date: customer.birth_date,
-        address: JSON.parse(customer.address),
-        phone: customer.phone,
-        email: customer.email,
-        career: customer.career
-      }
+  async update({ request, response }) {
+    const customer = request.post().customer
 
-      response.json(customerRes);
+    customer.name_prefix = request.post().name_prefix
+    customer.first_name = request.post().first_name
+    customer.last_name = request.post().last_name
+    customer.ident_number = request.post().ident_number
+    customer.ident_img = request.post().ident_img
+    customer.birth_date = request.post().birth_date
+    customer.address = request.post().address
+    customer.phone = request.post().phone
+    customer.email = request.post().email
+    customer.career = request.post().career
+
+    await customer.save()
+    
+    console.log(request.ip() +' => '+'PUT: Customer(' + customer.id +');')
+    response.status(200).json({
+      message: 'Successfully updated this customer.',
+      data: customer
+    })
   }
 
-  /**
-   * Update customer details.
-   * PUT or PATCH customers/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async update({ params, request, response }) {
-  }
 
-  /**
-   * Delete a customer with id.
-   * DELETE customers/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async destroy({ params, request, response }) {
+  async destroy({ request, response }) {
+    const customer = request.post().customer
+
+    await customer.delete()
+    
+    console.log(request.ip() +' => '+'DELETE: Customer(' + customer.id +');')
+    response.status(200).json({
+      message: 'Successfully deleted this customer.',
+      data: customer
+    })
   }
 }
 

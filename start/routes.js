@@ -15,13 +15,15 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
+const Helpers = use('Helpers')
+const Drive = use('Drive')
 
-Route.get('/', 'UserController.index').middleware('guest').as('/index')
-Route.post('/login', 'UserController.login').validator('Login').middleware('guest').as('/user.login')
-Route.post('/logout', 'UserController.logout').middleware('auth').as('/user.logout')
+Route.get('/', 'LoginController.index').middleware('guest').as('/login.index')
+Route.post('/login', 'LoginController.login').validator('Login').middleware('guest').as('/login.login')
+Route.post('/logout', 'LoginController.logout').middleware('auth').as('/login.logout')
 
 Route.get('/welcome', 'HomeController.index').middleware('auth')
-Route.resource('/sellers', 'SellerController').middleware('auth').validator(new Map([
+Route.resource('/sellers', 'SellerController').except(['edit', 'update', 'destroy']).middleware('auth').validator(new Map([
     ['/sellers.store', 'StoreSeller'],
 ]))
 // Route.resource('/customers', 'CustomerController').middleware('auth')
@@ -30,4 +32,10 @@ Route.resource('/sellers', 'SellerController').middleware('auth').validator(new 
 //     Route.get('/:brand/:model', 'CarSeryController.show').as('/car-series.show')
 // }).prefix('/car-series').middleware('auth')
 
-Route.resource('/api/customers', 'Api/CustomerController').apiOnly()
+Route.resource('/api/customers', 'Api/CustomerController').apiOnly().middleware(new Map([
+    [['show', 'update', 'destroy'], ['findCustomer']], [['store', 'update'], ['checkTypeOfImg']]
+]))
+Route.get('/identImges/:imgName', async ({ response, params: {imgName} }) => {
+    // const img = await Drive.get()
+    response.download(Helpers.tmpPath('identImges/'+imgName))
+})

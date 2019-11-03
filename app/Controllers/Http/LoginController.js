@@ -1,6 +1,6 @@
 'use strict'
 
-class UserController {
+class LoginController {
 
     async index({ request, response, view }) {
         return view.render('auth.login')
@@ -28,4 +28,4 @@ class UserController {
 
 }
 
-module.exports = UserController
+module.exports = LoginController

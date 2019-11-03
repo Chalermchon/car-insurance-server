@@ -13,6 +13,7 @@
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 const Factory = use('Factory')
+const Env = use('Env')
 
 // Factory.blueprint('App/Models/User', (faker) => {
 //   return {
@@ -27,15 +28,15 @@ Factory.blueprint('App/Models/Customer', (faker) => {
         first_name: faker.first({gender: gender}),
         last_name: faker.last(),
         ident_number: faker.integer({min: 1000000000000, max: 9999999999999}) + '',
-        ident_img: faker.string({length: 10, alpha: true, numeric: true}).concat('.jpeg'),
+        ident_img: Env.get('APP_URL')+'/identImges/default.jpg',
         birth_date: faker.birthday({type: 'adult'}),
-        address: JSON.stringify({
+        address: {
             houseNumber: faker.integer({min: 10, max: 999}) + '/' + faker.integer({min: 1, max: 99}),
             tambon: faker.country({ full: true }),
             amphoe: faker.city(),
             changwat: faker.province({full: true}),
             postalCode: faker.zip()
-        }),
+        },
         phone: '0' + faker.integer({min: 8, max: 9}) + faker.integer({min: 10000000, max: 99999999}),
         email: faker.email({domain: "example.com"}),
         career: faker.profession()

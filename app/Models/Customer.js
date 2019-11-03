@@ -9,7 +9,20 @@ class Customer extends Model {
         super.boot()
         
         this.addTrait('@provider:Lucid/SoftDeletes')
-        this.addTrait('@provider:Jsonable', [ 'address' ])
+
+        this.addHook('beforeSave', async (customer) => {
+            customer.address = JSON.stringify(customer.address)
+        })
+    }
+    getAddress(address) {
+        return JSON.parse(address);
+    }
+    getBirthDate(birth_date) {
+        let tmp_birth_date = new Date(birth_date)
+        let year = tmp_birth_date.getFullYear()
+        let month = (tmp_birth_date.getMonth()<=9 ? '0'.concat(tmp_birth_date.getMonth()+1) : tmp_birth_date.getMonth()+1)
+        let date = (tmp_birth_date.getDate()<=9 ? '0'.concat(tmp_birth_date.getDate()) : tmp_birth_date.getDate())
+        return year +'-'+ month +'-'+ date 
     }
 
     carInformations() {
