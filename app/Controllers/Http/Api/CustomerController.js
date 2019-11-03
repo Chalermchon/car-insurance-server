@@ -8,7 +8,6 @@ class CustomerController {
   async index({ request, response }) {
     const customers = await Customer.all()
 
-    console.log(request.ip() +' => '+'GET: Customers;');
     response.status(200).json({
       message: 'Here are your customers.',
       data: customers
@@ -27,7 +26,6 @@ class CustomerController {
       birth_date, address, phone, email, career
     })
 
-    console.log(request.ip() +' => '+'POST: Customer(' + customer.id +');')
     response.status(201).json({
       message: 'Successfully created a new customer.',
       data: customer
@@ -38,7 +36,6 @@ class CustomerController {
   async show({ request, response }) {
     const customer = request.post().customer
 
-    console.log(request.ip() +' => '+'GET: Customer(' + customer.id +');')
     response.status(200).json({
       message: 'Here is your customer.',
       data: customer
@@ -62,7 +59,6 @@ class CustomerController {
 
     await customer.save()
     
-    console.log(request.ip() +' => '+'PUT: Customer(' + customer.id +');')
     response.status(200).json({
       message: 'Successfully updated this customer.',
       data: customer
@@ -75,7 +71,6 @@ class CustomerController {
 
     await customer.delete()
     
-    console.log(request.ip() +' => '+'DELETE: Customer(' + customer.id +');')
     response.status(200).json({
       message: 'Successfully deleted this customer.',
       data: customer

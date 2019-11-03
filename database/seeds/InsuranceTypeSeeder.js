@@ -19,7 +19,7 @@ class InsuranceTypeSeeder {
     // insuranceType.insurance_name = "..."
     // insuranceType.option = "..." /ถ้าไม่มี ใส่ null
     // insuranceType.protection_detail_id = 0
-    // insuranceType.save()
+    // await insuranceType.save()
    
     //-----2+ max ซ่อมห้าง-------
     insuranceType  = new InsuranceType()
@@ -29,7 +29,7 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : "100,000"
     })
     insuranceType.protection_detail_id = 1
-    insuranceType.save()
+    await insuranceType.save()
 
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2+ Max (ซ่อมห้าง)"
@@ -38,7 +38,7 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : "200,000"
     })
     insuranceType.protection_detail_id = 1
-    insuranceType.save()
+    await insuranceType.save()
 
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2+ Max (ซ่อมห้าง)"
@@ -47,7 +47,7 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : "200,000"
     })
     insuranceType.protection_detail_id = 1
-    insuranceType.save()
+    await insuranceType.save()
 
     //--------2+ max ซ่อมอู่--------
     insuranceType  = new InsuranceType()
@@ -57,7 +57,7 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : "100,000"
     })
     insuranceType.protection_detail_id = 2
-    insuranceType.save()
+    await insuranceType.save()
 
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2+ Max (ซ่อมอู่)"
@@ -66,7 +66,7 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : "200,000"
     })
     insuranceType.protection_detail_id = 2
-    insuranceType.save()
+    await insuranceType.save()
 
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2+ Max (ซ่อมอู่)"
@@ -75,17 +75,17 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : "200,000"
     })
     insuranceType.protection_detail_id = 2
-    insuranceType.save()
+    await insuranceType.save()
 
     //--------2+ 35 up--------
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2+ 35 up"
     insuranceType.option = JSON.stringify({
-      "ทุนประกัน" : "150,000",
+      "ทุนประกัน" : "100,000",
       "ภัยธรรมชาติ" : null
     })
     insuranceType.protection_detail_id = 3
-    insuranceType.save()
+    await insuranceType.save()
 
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2+ 35 up"
@@ -94,7 +94,7 @@ class InsuranceTypeSeeder {
       "ภัยธรรมชาติ" : null
     })
     insuranceType.protection_detail_id = 3
-    insuranceType.save()
+    await insuranceType.save()
 
 
     //-----2+ Minimal ซ่อมอู่-------
@@ -102,7 +102,7 @@ class InsuranceTypeSeeder {
     insuranceType.insurance_name = "2+ Minimal (ซ่อมอู่)"
     insuranceType.option = null
     insuranceType.protection_detail_id = 4
-    insuranceType.save()
+    await insuranceType.save()
 
     //-------------- 3+ --------------
     insuranceType  = new InsuranceType()
@@ -113,7 +113,7 @@ class InsuranceTypeSeeder {
       "ค่าเสียหายส่วนแรก" : "2000"
     })
     insuranceType.protection_detail_id = 5
-    insuranceType.save()
+    await insuranceType.save()
 
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "3+"
@@ -123,35 +123,35 @@ class InsuranceTypeSeeder {
       "ค่าเสียหายส่วนแรก" : "ไม่มี"
     })
     insuranceType.protection_detail_id = 5
-    insuranceType.save()
+    await insuranceType.save()
 
     //-------------- 2 เซฟ Special --------------
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2 เซฟ Special"
     insuranceType.option = null
     insuranceType.protection_detail_id = 6
-    insuranceType.save()
+    await insuranceType.save()
 
     //-------------- 2 กันชน --------------
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "2 กันชน"
     insuranceType.option = null
     insuranceType.protection_detail_id = 6
-    insuranceType.save()
+    await insuranceType.save()
 
     //-------------- 3 Best --------------
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "3 Best"
     insuranceType.option = null
     insuranceType.protection_detail_id = 7
-    insuranceType.save()
+    await insuranceType.save()
 
     //-------------- 3 กันชน --------------
     insuranceType  = new InsuranceType()
     insuranceType.insurance_name = "3 กันชน"
     insuranceType.option = null
     insuranceType.protection_detail_id = 8
-    insuranceType.save()
+    await insuranceType.save()
   }
 }
 

@@ -16,7 +16,6 @@ class FindCustomer {
     const customer = await Customer.find(id)
 
     if (!customer) {
-      console.error(request.ip() +' => '+ request.method() +': Customer NOT FOUND')
       return response.status(404).json({
         message: 'Customer not found.',
         id

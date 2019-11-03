@@ -35,7 +35,10 @@ Route.resource('/sellers', 'SellerController').except(['edit', 'update', 'destro
 Route.resource('/api/customers', 'Api/CustomerController').apiOnly().middleware(new Map([
     [['show', 'update', 'destroy'], ['findCustomer']], [['store', 'update'], ['checkTypeOfImg']]
 ]))
+Route.get('/api/car-series', 'Api/CarseryController.index').as('/api/car-series.index')
+Route.get('/api/insurance-types', 'Api/InsuranceTypeController.index').as('/api/insurance-types.index')
+Route.get('/api/rate-prices/:car_group_id/:car_type_id', 'Api/RatePriceController.index').as('/api/rate-prices.index')
+
 Route.get('/identImges/:imgName', async ({ response, params: {imgName} }) => {
-    // const img = await Drive.get()
     response.download(Helpers.tmpPath('identImges/'+imgName))
 })

@@ -10,6 +10,9 @@ class ProtectionDetail extends Model {
         
         this.addTrait('@provider:Lucid/SoftDeletes')
     }
+    getDetails(details) {
+        return JSON.parse(details);
+    }
 
     insuranceRequests() {
         return this.manyThrough('App/Models/InsuranceType', 'insuranceRequests')

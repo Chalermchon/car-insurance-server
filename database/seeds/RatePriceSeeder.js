@@ -32,21 +32,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
     ratePrice.price = 11000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
     ratePrice.price = 11000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
     ratePrice.price = 12800
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
@@ -54,21 +54,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
     ratePrice.price = 11000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
     ratePrice.price = 11000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
     ratePrice.price = 12800
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
@@ -76,21 +76,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
     ratePrice.price = 10000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
     ratePrice.price = 10000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
     ratePrice.price = 11800
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
@@ -98,21 +98,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
     ratePrice.price = 10000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
     ratePrice.price = 10000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
     ratePrice.price = 11800
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
@@ -120,21 +120,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
     ratePrice.price = 10000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
     ratePrice.price = 10000
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 1
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
     ratePrice.price = 11800
-    ratePrice.save()
+    await ratePrice.save()
 
     /** 2+ Max (ซ่อมห้าง)
      *  option 2
@@ -147,21 +147,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
     ratePrice.price = 13400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
@@ -169,21 +169,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
     ratePrice.price = 13400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
@@ -191,21 +191,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
     ratePrice.price = 10600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
     ratePrice.price = 10600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
     ratePrice.price = 12400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
@@ -213,21 +213,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
     ratePrice.price = 10600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
     ratePrice.price = 10600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
     ratePrice.price = 12400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
@@ -235,21 +235,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
     ratePrice.price = 10600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
     ratePrice.price = 10600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 2
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
     ratePrice.price = 12400
-    ratePrice.save()
+    await ratePrice.save()
 
     /** 2+ Max (ซ่อมห้าง)
      *  option 3
@@ -262,21 +262,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
     ratePrice.price = 12600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
     ratePrice.price = 12600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
     ratePrice.price = 14400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
@@ -284,21 +284,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
     ratePrice.price = 12600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
     ratePrice.price = 12600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
     ratePrice.price = 14400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
@@ -306,21 +306,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
     ratePrice.price = 13400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
@@ -328,21 +328,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
     ratePrice.price = 13400
-    ratePrice.save()
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
@@ -350,21 +350,21 @@ class RatePriceSeeder {
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
     ratePrice.price = 11600
-    ratePrice.save()
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
     ratePrice.insurance_type_id = 3
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
     ratePrice.price = 13400
-    ratePrice.save()
+    await ratePrice.save()
 
     /** 2+ Max (ซ่อมอู่)
      *  option 1
@@ -373,113 +373,113 @@ class RatePriceSeeder {
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,900
-    ratePrice.save()
+    ratePrice.price = 8900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,900
-    ratePrice.save()
+    ratePrice.price = 8900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 10,700
-    ratePrice.save()
+    ratePrice.price = 10700
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,900
-    ratePrice.save()
+    ratePrice.price = 8900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,900
-    ratePrice.save()
+    ratePrice.price = 8900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
-    ratePrice.price = 10,700
-    ratePrice.save()
+    ratePrice.price = 10700
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 9,700
-    ratePrice.save()
+    ratePrice.price = 9700
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 9,700
-    ratePrice.save()
+    ratePrice.price = 9700
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 4
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 9,700
-    ratePrice.save()
+    ratePrice.price = 9700
+    await ratePrice.save()
 
     /** 2+ Max (ซ่อมอู่)
      *  option 2
@@ -488,113 +488,113 @@ class RatePriceSeeder {
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 11,300
-    ratePrice.save()
+    ratePrice.price = 11300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
-    ratePrice.price = 11,300
-    ratePrice.save()
+    ratePrice.price = 11300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 10,300
-    ratePrice.save()
+    ratePrice.price = 10300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 10,300
-    ratePrice.save()
+    ratePrice.price = 10300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 5
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 10,300
-    ratePrice.save()
+    ratePrice.price = 10300
+    await ratePrice.save()
 
     /** 2+ Max (ซ่อมอู่)
      *  option 3
@@ -603,113 +603,113 @@ class RatePriceSeeder {
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 10,500
-    ratePrice.save()
+    ratePrice.price = 10500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 10,500
-    ratePrice.save()
+    ratePrice.price = 10500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 12,300
-    ratePrice.save()
+    ratePrice.price = 12300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 10,500
-    ratePrice.save()
+    ratePrice.price = 10500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 10,500
-    ratePrice.save()
+    ratePrice.price = 10500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
-    ratePrice.price = 12,300
-    ratePrice.save()
+    ratePrice.price = 12300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 11,300
-    ratePrice.save()
+    ratePrice.price = 11300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 11,300
-    ratePrice.save()
+    ratePrice.price = 11300
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 9,500
-    ratePrice.save()
+    ratePrice.price = 9500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 3
+    ratePrice.insurance_type_id = 6
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 11,300
-    ratePrice.save()
+    ratePrice.price = 11300
+    await ratePrice.save()
 
     /** 2+ 35 up
      *  option 1
@@ -717,234 +717,222 @@ class RatePriceSeeder {
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,499
-    ratePrice.save()
+    ratePrice.price = 6499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,499
-    ratePrice.save()
+    ratePrice.price = 6499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 5,900
-    ratePrice.save()
+    ratePrice.price = 5900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,499
-    ratePrice.save()
+    ratePrice.price = 6499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 5,900
-    ratePrice.save()
+    ratePrice.price = 5900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,499
-    ratePrice.save()
+    ratePrice.price = 6499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 5,900
-    ratePrice.save()
+    ratePrice.price = 5900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 7
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,499
-    ratePrice.save()
+    ratePrice.price = 6499
+    await ratePrice.save()
 
     /** 2+ 35 up
      *  option 2
-     *  > ทุนประกัน = 100,000
+     *  > ทุนประกัน = 200,000
     */
     //-------- รถกลุ่ม 1 -------- 
-    ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
-    ratePrice.car_group_id = 1
-    ratePrice.car_type_id = 1
-    ratePrice.price = null
-    ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,499
-    ratePrice.save()
+    ratePrice.price = 7499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
-    ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
-    ratePrice.car_group_id = 2
-    ratePrice.car_type_id = 1
-    ratePrice.price = null
-    ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,499
-    ratePrice.save()
+    ratePrice.price = 7499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,499
-    ratePrice.save()
+    ratePrice.price = 7499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,499
-    ratePrice.save()
+    ratePrice.price = 7499
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 8
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,499
-    ratePrice.save()
+    ratePrice.price = 7499
+    await ratePrice.save()
     
      /** 2 Minimal (ซ่อมอู่)
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,900
-    ratePrice.save()
+    ratePrice.price = 7900
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 9
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,900
-    ratePrice.save()
+    ratePrice.price = 6900
+    await ratePrice.save()
 
     /** 3+
      *  option 1
@@ -952,113 +940,113 @@ class RatePriceSeeder {
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,800
-    ratePrice.save()
+    ratePrice.price = 7800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,800
-    ratePrice.save()
+    ratePrice.price = 7800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 7,800
-    ratePrice.save()
+    ratePrice.price = 7800
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,800
-    ratePrice.save()
+    ratePrice.price = 7800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,800
-    ratePrice.save()
+    ratePrice.price = 7800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,800
-    ratePrice.save()
+    ratePrice.price = 7800
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 10
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 6,800
-    ratePrice.save()
+    ratePrice.price = 6800
+    await ratePrice.save()
 
     /** 3+
      *  option 2
@@ -1066,495 +1054,495 @@ class RatePriceSeeder {
     */
     //-------- รถกลุ่ม 1 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
-    ratePrice.price = 8,500
-    ratePrice.save()
+    ratePrice.price = 8500
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 2
+    ratePrice.insurance_type_id = 11
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 7,500
-    ratePrice.save()
+    ratePrice.price = 7500
+    await ratePrice.save()
 
     /** 2 เซฟ Special
      *  no option 
     */
     //-------- รถกลุ่ม 1 --------  
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,550
-    ratePrice.save()
+    ratePrice.price = 2550
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,350
-    ratePrice.save()
+    ratePrice.price = 3350
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,550
-    ratePrice.save()
+    ratePrice.price = 2550
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,350
-    ratePrice.save()
+    ratePrice.price = 3350
+    await ratePrice.save()
     
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,550
-    ratePrice.save()
+    ratePrice.price = 2550
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,350
-    ratePrice.save()
+    ratePrice.price = 3350
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,550
-    ratePrice.save()
+    ratePrice.price = 2550
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,350
-    ratePrice.save()
+    ratePrice.price = 3350
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,550
-    ratePrice.save()
+    ratePrice.price = 2550
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 12
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,350
-    ratePrice.save()
+    ratePrice.price = 3350
+    await ratePrice.save()
 
     /** 2 Bumper
      *  no option 
     */
     //-------- รถกลุ่ม 1 --------  
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
     
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 13
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,599
-    ratePrice.save()
+    ratePrice.price = 3599
+    await ratePrice.save()
     
     /** 3 Best
      *  no option 
     */
     //-------- รถกลุ่ม 1 --------  
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,250
-    ratePrice.save()
+    ratePrice.price = 2250
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,000
-    ratePrice.save()
+    ratePrice.price = 3000
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,250
-    ratePrice.save()
+    ratePrice.price = 3250
+    await ratePrice.save()
     
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,250
-    ratePrice.save()
+    ratePrice.price = 2250
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,000
-    ratePrice.save()
+    ratePrice.price = 3000
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,250
-    ratePrice.save()
+    ratePrice.price = 3250
+    await ratePrice.save()
     
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,250
-    ratePrice.save()
+    ratePrice.price = 2250
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,000
-    ratePrice.save()
+    ratePrice.price = 3000
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,250
-    ratePrice.save()
+    ratePrice.price = 3250
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,250
-    ratePrice.save()
+    ratePrice.price = 2250
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,000
-    ratePrice.save()
+    ratePrice.price = 3000
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,250
-    ratePrice.save()
+    ratePrice.price = 3250
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 2,250
-    ratePrice.save()
+    ratePrice.price = 2250
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,000
-    ratePrice.save()
+    ratePrice.price = 3000
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 14
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,250
-    ratePrice.save()
+    ratePrice.price = 3250
+    await ratePrice.save()
 
     /** 3 กันชน
      *  no option 
     */
     //-------- รถกลุ่ม 1 --------  
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 1
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
     
     //-------- รถกลุ่ม 2 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 2
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
     
     //-------- รถกลุ่ม 3 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 3
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 4 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 4
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     //-------- รถกลุ่ม 5 -------- 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 1
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 2
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
     ratePrice = new RatePrice()
-    ratePrice.insurance_type_id = 1
+    ratePrice.insurance_type_id = 15
     ratePrice.car_group_id = 5
     ratePrice.car_type_id = 3
-    ratePrice.price = 3,333
-    ratePrice.save()
+    ratePrice.price = 3333
+    await ratePrice.save()
 
   }
 }

@@ -9,10 +9,7 @@ class Customer extends Model {
         super.boot()
         
         this.addTrait('@provider:Lucid/SoftDeletes')
-
-        this.addHook('beforeSave', async (customer) => {
-            customer.address = JSON.stringify(customer.address)
-        })
+        
     }
     getAddress(address) {
         return JSON.parse(address);
