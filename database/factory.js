@@ -30,13 +30,13 @@ Factory.blueprint('App/Models/Customer', (faker) => {
         ident_number: faker.integer({min: 1000000000000, max: 9999999999999}) + '',
         ident_img: Env.get('APP_URL')+'/identImges/default.jpg',
         birth_date: faker.birthday({type: 'adult'}),
-        address: {
+        address: JSON.stringify({
             houseNumber: faker.integer({min: 10, max: 999}) + '/' + faker.integer({min: 1, max: 99}),
             tambon: faker.country({ full: true }),
             amphoe: faker.city(),
             changwat: faker.province({full: true}),
             postalCode: faker.zip()
-        },
+        }),
         phone: '0' + faker.integer({min: 8, max: 9}) + faker.integer({min: 10000000, max: 99999999}),
         email: faker.email({domain: "example.com"}),
         career: faker.profession()
