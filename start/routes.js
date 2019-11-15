@@ -35,6 +35,9 @@ Route.resource('/sellers', 'SellerController').except(['edit', 'update', 'destro
 Route.resource('/api/customers', 'Api/CustomerController').apiOnly().middleware(new Map([
     [['show', 'update', 'destroy'], ['findCustomer']], [['store', 'update'], ['checkTypeOfImg']]
 ]))
+
+Route.get('/api/insurance-types', 'Api/InsuranceTypeController.index').as('/api/insurance-types.index')
+
 Route.get('/api/car-series/brands', 'Api/CarSeryController.brands').as('/api/car-series/brands')
 Route.get('/api/car-series/models/:brand', 'Api/CarSeryController.models').as('/api/car-series/models')
 Route.get('/api/car-series/years/:model', 'Api/CarSeryController.years').as('/api/car-series/years')
@@ -42,7 +45,6 @@ Route.get('/api/car-series/details/:model/:year', 'Api/CarSeryController.details
 
 Route.get('/api/rate-prices/:brand/:model/:year/:detail', 'Api/RatePriceController.index').as('/api/rate-prices.index')
 
-Route.get('/api/insurance-types', 'Api/InsuranceTypeController.index').as('/api/insurance-types.index')
 Route.post('/api/car-informations', 'Api/CarInformationController.store').as('/api/car-informations.store')
 
 Route.post('/api/insurance-requests', 'Api/InsuranceRequestController.store').as('/api/insurance-requests.store')

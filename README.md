@@ -31,13 +31,24 @@
     > DB_PASSWORD=<< Password of Username >><br/>
     > DB_DATABASE=<< your Database Name >><br/>
 
-* ทำการสร้าง Table ของ Database พร้อมสร้างข้อมูลเริ่มต้น ด้วยคำสั่ง
+* ทำการสร้าง Table ของ Database ด้วยคำสั่ง
     ```bash
-     adonis migration:run --seed
+     adonis migration:run 
     ```
     และในครั้งต่อๆไปให้ใช้คำสั่งนี้
     ```bash
-     adonis migration:refresh --seed
+     adonis migration:refresh
+    ```
+* ทำการสร้างข้อมูลเริ่มต้นด้วยคำสั่ง (ตามลำดับ)
+    ```bash
+     adonis seed --files UserSeeder.js
+     adonis seed --files SellerSeeder.js
+     adonis seed --files CarGroupSeeder.js
+     adonis seed --files CarTypeSeeder.js
+     adonis seed --files CarSerySeeder.js
+     adonis seed --files ProtectionDetailSeeder.js
+     adonis seed --files InsuranceTypeSeeder.js
+     adonis seed --files RatePriceSeeder.js
     ```
 
 ## วิธีการ Run

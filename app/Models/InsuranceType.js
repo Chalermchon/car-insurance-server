@@ -11,7 +11,7 @@ class InsuranceType extends Model {
         this.addTrait('@provider:Lucid/SoftDeletes')
     }
     getOption(option) {
-        return JSON.parse(option)
+        return JSON.parse(option);
     }
 
     insuranceRequests() {

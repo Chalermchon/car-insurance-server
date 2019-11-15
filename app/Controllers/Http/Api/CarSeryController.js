@@ -4,13 +4,14 @@ const CarSery = use('App/Models/CarSery')
 
 class CarSeryController {
 
+  
   async brands({ response }) {
     const carSeries = (await CarSery.query().fetch()).rows;
 
     const carBrands = [];
     carSeries.map(carSery => {
 
-      if (carBrands.indexOf(carSery.brand) === -1) {
+      if (!carBrands.includes(carSery.brand)) {
         carBrands.push(carSery.brand);
       }
     });
@@ -32,7 +33,7 @@ class CarSeryController {
     const carModels = [];
     carSeriesWithBrand.map(carSery => {
 
-      if (carModels.indexOf(carSery.model) === -1) {
+      if (!carModels.includes(carSery.model)) {
         carModels.push(carSery.model);
       }
     });
@@ -79,7 +80,7 @@ class CarSeryController {
 
     const carDetails = carSeriesWithModelAndYear.map(carSery => {
       return carSery.detail;
-    })
+    });
 
     response.status(200).json({
       message: 'Here are your car details of ' + model + ' in ' + year + '.',

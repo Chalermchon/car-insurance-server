@@ -5,7 +5,7 @@ const RatePrice = use('App/Models/RatePrice')
 
 class RatePriceController {
 
-
+  
   async index({ params: { brand, model, year, detail }, response }) {
     const carSeries = (await CarSery.query().fetch()).rows;
 
@@ -29,13 +29,13 @@ class RatePriceController {
         name: ratePrice.insuranceType.insurance_name,
         option: ratePrice.insuranceType.option,
         price: ratePrice.price
-      }
-    })
+      };
+    });
 
     response.status(200).json({
       message: 'Here are your rate prices of ' + brand + ' ' + model + ' ' + year + ' ' + detail + '.',
       data: ratePricesResponse
-    })
+    });
   }
 }
 

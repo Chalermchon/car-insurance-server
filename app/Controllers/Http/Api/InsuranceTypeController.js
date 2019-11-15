@@ -4,57 +4,39 @@ const InsuranceType = use('App/Models/InsuranceType')
 
 class InsuranceTypeController {
 
-  async index({ request, response }) {
-    const insuranceTypes = (await InsuranceType.query().with('protectionDetail').fetch()).rows
 
-    const getDetails = async () => {
-      return Promise.all(insuranceTypes.map(async (insuranceType) => {
-        return {
-          id: insuranceType.protection_detail_id,
-          details: (await insuranceType.protectionDetail().fetch()).details
-        }
-      }))
-    }
-    const details = await getDetails()
+  async index({ response }) {
+    const insuranceTypes = (await InsuranceType.query().with('protectionDetail').fetch()).rows;
 
-    const insuranceGroups = []
-
-    const insuranceTypesWithDetails = insuranceTypes.map((value)=>{
-      
-      if (!insuranceGroups.includes(value.insurance_group)) {
-        insuranceGroups.push(value.insurance_group)
+    const insuranceGroups = [];
+    const insuranceTypesResult = insuranceTypes.map(insuranceType  => {
+      if (!insuranceGroups.includes(insuranceType.insurance_group)) {
+        insuranceGroups.push(insuranceType.insurance_group)
       }
-      return (
-        {
-          id: value.id,
-          insurance_group: value.insurance_group,
-          insurance_name: value.insurance_name,
-          option: value.option,
-          details: details[value.protection_detail_id].details
-        }
-      )
-    })
-
-    const res = insuranceGroups.map((value) => {
-      const insuranceTypesByGroup = []
-      insuranceTypesWithDetails.filter(insuranceTypeWithDetails => {
-        if (value === insuranceTypeWithDetails.insurance_group) {
-          insuranceTypesByGroup.push({
-              id: insuranceTypeWithDetails.id,
-              insurance_name: insuranceTypeWithDetails.insurance_name,
-              option: JSON.parse(insuranceTypeWithDetails.option),
-              details: JSON.parse(insuranceTypeWithDetails.details)
-          })
-        }
-      })
+      let details = {
+        annotation: insuranceType.toJSON().protectionDetail.details.annotation,
+        protections: insuranceType.toJSON().protectionDetail.details.protections
+      };
       return {
-        [`${value}`]: insuranceTypesByGroup
-      }
-    })
+        group: insuranceType.insurance_group,
+        name: insuranceType.insurance_name,
+        option: JSON.parse(insuranceType.option),
+        details: details
+      };
+    });
+
+    const insuranceTypesRes = insuranceGroups.map(insuranceGroup => {
+      const insuranceTypes = insuranceTypesResult.filter(insuranceType => {
+        return insuranceType.group === insuranceGroup;
+      });
+      return {
+        [`${insuranceGroup}`]: insuranceTypes
+      };
+    });
 
     response.status(200).json({
       message: 'Here are your insurance types.',
-      data: res
+      data: insuranceTypesRes
     })
   }
 }
