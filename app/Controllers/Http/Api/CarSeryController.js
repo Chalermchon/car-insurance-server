@@ -3,41 +3,90 @@
 const CarSery = use('App/Models/CarSery')
 
 class CarSeryController {
- 
- 
-  async index ({ request, response }) {
-    const carSery = (await CarSery.query()
-      .with('carGroup', async carGroupQuery => {
-        await carGroupQuery.select('id', 'group_name')
-      }).with('carType', async carTypeQuery => {
-        await carTypeQuery.select('id', 'type_name')
-      }).fetch()).rows;
 
-    const count_brands = []
-    const count_models = []
-    const brands = []
+  async brands({ response }) {
+    const carSeries = (await CarSery.query().fetch()).rows;
 
-    carSery.map((value) => {
-      if (!count_brands.includes(value.brand)) {
-        count_brands.push(value.brand)
+    const carBrands = [];
+    carSeries.map(carSery => {
+
+      if (carBrands.indexOf(carSery.brand) === -1) {
+        carBrands.push(carSery.brand);
       }
-    })
-
-    carSery.map((value) => {
-      if (!count_models.includes(value.model)) {
-        count_models.push(value.model)
-      }
-    })
-
-    console.log(count_models);
-    
-
+    });
 
     response.status(200).json({
-      message: 'Here are your car series.',
-      data: carSery
-    })
+      message: 'Here are your car brands.',
+      data: carBrands
+    });
   }
+
+
+  async models({ params: { brand }, response }) {
+    const carSeries = (await CarSery.query().fetch()).rows;
+
+    const carSeriesWithBrand = carSeries.filter(carSery => {
+      return carSery.brand.toLowerCase() === brand.toLowerCase();
+    });
+
+    const carModels = [];
+    carSeriesWithBrand.map(carSery => {
+
+      if (carModels.indexOf(carSery.model) === -1) {
+        carModels.push(carSery.model);
+      }
+    });
+
+    response.status(200).json({
+      message: 'Here are your car models of ' + brand + '.',
+      data: carModels
+    });
+  }
+
+
+  async years({ params: { model }, response }) {
+    const carSeries = (await CarSery.query().fetch()).rows;
+
+    const carSeriesWithModel = carSeries.filter(carSery => {
+      return carSery.model.toLowerCase() === model.toLowerCase();
+    });
+
+    const carYears = [];
+    carSeriesWithModel.map(carSery => {
+
+      if (carYears.indexOf(carSery.year) === -1) {
+        carYears.push(carSery.year);
+      }
+    });
+
+    response.status(200).json({
+      message: 'Here are your car years of ' + model + '.',
+      data: carYears
+    });
+  }
+  
+
+  async details({ params: { model, year }, response }) {
+    const carSeries = (await CarSery.query().fetch()).rows;
+
+    const carSeriesWithModel = carSeries.filter(carSery => {
+      return carSery.model.toLowerCase() === model.toLowerCase();
+    });
+
+    const carSeriesWithModelAndYear = carSeriesWithModel.filter(carSery => {
+      return carSery.year === year;
+    });
+
+    const carDetails = carSeriesWithModelAndYear.map(carSery => {
+      return carSery.detail;
+    })
+
+    response.status(200).json({
+      message: 'Here are your car details of ' + model + ' in ' + year + '.',
+      data: carDetails
+    });
+  }
+
 }
 
 module.exports = CarSeryController
