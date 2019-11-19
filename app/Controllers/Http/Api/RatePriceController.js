@@ -26,6 +26,7 @@ class RatePriceController {
       let ratePrice = value.toJSON();
       return {
         id: ratePrice.insuranceType.id,
+        group: ratePrice.insuranceType.insurance_group,
         name: ratePrice.insuranceType.insurance_name,
         option: ratePrice.insuranceType.option,
         price: ratePrice.price
