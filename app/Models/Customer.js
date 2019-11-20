@@ -4,12 +4,12 @@
 const Model = use('Model')
 
 class Customer extends Model {
-    
-    static boot () {
+
+    static boot() {
         super.boot()
-        
+
         this.addTrait('@provider:Lucid/SoftDeletes')
-        
+
     }
     getAddress(address) {
         return JSON.parse(address);
@@ -17,9 +17,9 @@ class Customer extends Model {
     getBirthDate(birth_date) {
         let tmp_birth_date = new Date(birth_date)
         let year = tmp_birth_date.getFullYear()
-        let month = (tmp_birth_date.getMonth()<=9 ? '0'.concat(tmp_birth_date.getMonth()+1) : tmp_birth_date.getMonth()+1)
-        let date = (tmp_birth_date.getDate()<=9 ? '0'.concat(tmp_birth_date.getDate()) : tmp_birth_date.getDate())
-        return year +'-'+ month +'-'+ date 
+        let month = (tmp_birth_date.getMonth() <= 9 ? '0'.concat(tmp_birth_date.getMonth() + 1) : tmp_birth_date.getMonth() + 1)
+        let date = (tmp_birth_date.getDate() <= 9 ? '0'.concat(tmp_birth_date.getDate()) : tmp_birth_date.getDate())
+        return year + '-' + month + '-' + date
     }
 
     carInformations() {

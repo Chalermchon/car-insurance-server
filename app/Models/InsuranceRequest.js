@@ -11,6 +11,10 @@ class InsuranceRequest extends Model {
         this.addTrait('@provider:Lucid/SoftDeletes')
     }
 
+    static scopeHasStatusWaiting(query) {
+        return query.where('status', 'WAITNG')
+    }
+
     carInformation() {
         return this.belongsTo('App/Models/CarInformation')
     }

@@ -41,7 +41,8 @@ const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
   findCustomer: 'App/Middleware/FindCustomer',
-  checkTypeOfImg: 'App/Middleware/CheckTypeOfImg'
+  checkDataExists: 'App/Middleware/CheckDataExists',
+  checkTypeOfImg: 'App/Middleware/CheckTypeOfImg',
 }
 
 /*

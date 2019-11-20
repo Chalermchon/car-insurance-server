@@ -23,6 +23,8 @@ class RatePriceController {
     });
 
     const ratePricesResponse = ratePricesResult.map(value => {
+      console.log(value.toJSON());
+      
       let ratePrice = value.toJSON();
       return {
         id: ratePrice.insuranceType.id,
@@ -35,7 +37,8 @@ class RatePriceController {
 
     response.status(200).json({
       message: 'Here are your rate prices of ' + brand + ' ' + model + ' ' + year + ' ' + detail + '.',
-      data: ratePricesResponse
+      data: ratePricesResponse,
+      carSeryId: carSery[0].id
     });
   }
 }

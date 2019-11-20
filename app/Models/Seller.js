@@ -11,8 +11,8 @@ class Seller extends Model {
     static boot() {
         super.boot()
 
-        this.addTrait('@provider:Lucid/SoftDeletes') 
-        
+        this.addTrait('@provider:Lucid/SoftDeletes')
+
         this.addHook('beforeSave', async (sellerInstance) => {
             if (sellerInstance.dirty.password) {
                 sellerInstance.password = await Hash.make(sellerInstance.password)

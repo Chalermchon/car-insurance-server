@@ -18,15 +18,21 @@ class CustomerController {
   async store({ request, response }) {
     const {
       name_prefix, first_name, last_name, ident_number, ident_img, birth_date,
-      houseNumber, changwat, amphoe, tambon, postalCode, phone, email, career
+      house_number, changwat, amphoe, tambon, postal_code, phone, email, career
     } = request.post()
 
-    const address = JSON.stringify({houseNumber, changwat, amphoe, tambon, postalCode})
-
+    const address = JSON.stringify({house_number, changwat, amphoe, tambon, postal_code})
+    
     const customer = await Customer.create({
       name_prefix, first_name, last_name, ident_number, ident_img,
       birth_date, address, phone, email, career
     })
+
+    if (!customer) {
+      response.status(400).json({
+        message: 'Data is uncomplete. Please use these attributes name => name_prefix, first_name, last_name, ident_number, ident_img, birth_date, house_number, changwat, amphoe, tambon, postal_code, phone, email, career'
+      })
+    }
 
     response.status(201).json({
       message: 'Successfully created a new customer.',

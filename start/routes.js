@@ -33,7 +33,7 @@ Route.resource('/sellers', 'SellerController').except(['edit', 'update', 'destro
 // }).prefix('/car-series').middleware('auth')
 
 Route.resource('/api/customers', 'Api/CustomerController').apiOnly().middleware(new Map([
-    [['show', 'update', 'destroy'], ['findCustomer']], [['store', 'update'], ['checkTypeOfImg']]
+    [['store'], ['checkDataExists']], [['show', 'update', 'destroy'], ['findCustomer']], [['store', 'update'], ['checkTypeOfImg']]
 ]))
 
 Route.get('/api/insurance-types', 'Api/InsuranceTypeController.index').as('/api/insurance-types.index')
@@ -45,9 +45,10 @@ Route.get('/api/car-series/details/:model/:year', 'Api/CarSeryController.details
 
 Route.get('/api/rate-prices/:brand/:model/:year/:detail', 'Api/RatePriceController.index').as('/api/rate-prices.index')
 
-Route.post('/api/car-informations', 'Api/CarInformationController.store').as('/api/car-informations.store')
+Route.get('/api/car-informations/:license_plate_letter/:license_plate_number/:license_plate_province', 'Api/CarInformationController.show').as('/api/car-informations.show')
+Route.post('/api/car-informations', 'Api/CarInformationController.store').as('/api/car-informations.store').middleware(['checkDataExists'])
 
-Route.post('/api/insurance-requests', 'Api/InsuranceRequestController.store').as('/api/insurance-requests.store')
+Route.post('/api/insurance-requests', 'Api/InsuranceRequestController.store').as('/api/insurance-requests.store').middleware(['checkDataExists'])
 
 Route.get('/identImges/:imgName', async ({ response, params: {imgName} }) => {
     response.download(Helpers.tmpPath('identImges/'+imgName))
